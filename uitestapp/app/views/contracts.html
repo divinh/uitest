@@ -1,0 +1,45 @@
+<div class="row">
+	<div class="col-sm-3">
+		
+		<form class="form-horizontal" name="contractForm" ng-submit="contractForm.$valid && $state.go('contracts.detail', {id: contractsVm.id})">
+			<div class="form-group">
+				<h5><i>contracts.html</i></h5>
+			</div>
+			<div class="form-group">
+				<a class="btn btn-default" role="button" ui-sref="contracts.new" ng-click="contractsVm.id = ''">New</a>
+				<button type="button" class="btn btn-default" ng-disabled="contractForm.$invalid">Review</button>	
+				<button type="button" class="btn btn-default" ng-disabled="contractForm.$invalid">Re-assign</button>
+			</div>
+			<div class="form-group">					
+				<button type="button" class="btn btn-default" ng-disabled="contractForm.$invalid">Approve</button>
+				<button type="button" class="btn btn-default" ng-disabled="contractForm.$invalid">Reject</button>
+				<button type="button" class="btn btn-default" ng-disabled="contractForm.$invalid">Discard</button>
+			</div>
+		    <div class="form-group">
+		    	<div class="input-group">
+		    		<span class="input-group-btn">
+		    			<button type="button" class="btn btn-default" 
+		    				popover="Find a contract by customer number!" 
+		    				popover-trigger="mouseenter" ng-click="contractsVm.openCustomerContractsModal()">Find
+		    			</button> 
+		    		</span>
+			        <input type="text" class="form-control" placeholder="Contract" ng-minlength="8" ng-maxlength="8" ng-model="contractsVm.id">
+			        <span class="input-group-btn">
+			        	<a class="btn btn-default" role="button" ng-disabled="contractForm.$invalid" ui-sref="contracts.detail({id: contractsVm.id})">Detail</a>
+			        </span>
+			    </div>    
+		    </div>
+		    <div class="form-group">
+				<div class="list-group">
+					<a ng-repeat="contract in contractsVm.contractsService.lists()" ui-sref-active="active" class="list-group-item" ui-sref="contracts.detail({id: contract.id})" ng-click="contractsVm.id = contract.id">{{contract.id}} - {{contract.getName()}}</a>
+				</div>			    
+		    </div>
+		</form>  
+
+			
+	</div>
+	<div class="col-sm-9">
+		<h5><i>UI route contracts.detail view injection</i></h5>
+		<div ui-view></div>
+	</div>	
+</div>

@@ -1,0 +1,16 @@
+<div class="form-group row">
+	<div class="col-sm-12">
+		<h5><i>contracts-new-billingaccount.html</i></h5>
+	</div>	
+</div>	
+<div class="form-group row">
+	<div class="col-sm-12">
+	    <div ui-grid="contractsNewBillingaccountVm.gridOptions" ui-grid-selection class="myGrid"></div> 
+	    <pager total-items="contractsNewBillingaccountVm.totalItems" ng-model="contractsNewBillingaccountVm.currentPage"></pager> 
+	</div>	
+</div>	
+<div class="form-group row">
+	<div class="col-sm-4 col-sm-offset-4">
+	    <a ui-sref="contracts.new.profile" class="btn btn-block btn-info" ng-disabled="!contractsNewBillingaccountVm.accountSelected">Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+	</div>
+</div>

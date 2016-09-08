@@ -1,0 +1,43 @@
+var angular = require('angular');
+require('angular-ui-bootstrap');
+require('angular-ui-router');
+require('angular-ui-grid');
+require('angular-ui-switch');
+require('angular-moment');
+
+angular.module('onboarding', ['app.views', 'uiSwitch', 'ui.grid', 'ui.grid.selection', 'ui.router', 'ui.bootstrap', 'angularMoment'])
+.value('_', require('lodash'))
+.value('parselinkheader', require('parse-link-header'));
+require('./app.run');
+require('./app.routes');
+require('./app.config');
+require('./services/alert.service');
+require('./factories/contract-state.model');
+require('./factories/contract.model');
+require('./services/contract.service');
+require('./services/data.service');
+require('./services/contracts.service');
+require('./services/contract-detail-tabs.service');
+require('./services/user-detail-tabs.service');
+require('./controllers/main.controller');
+require('./controllers/activity.controller');
+require('./controllers/activity-contracts.controller');
+require('./controllers/activity-users.controller');
+require('./controllers/contracts.controller');
+require('./controllers/onboarding.controller');
+require('./controllers/users.controller');
+require('./controllers/contracts-detail.controller');
+require('./controllers/services.controller');
+require('./controllers/customers.controller');
+require('./controllers/accounts.controller');
+require('./controllers/serviceaccounts-services.controller');
+require('./controllers/serviceaccounts-accounts.controller');
+require('./controllers/customer-contracts.controller');
+require('./filters/contract-status.filter');
+require('./controllers/contracts-new.controller');
+require('./controllers/contracts-new-customer.controller');
+require('./controllers/contracts-new-billingaccount.controller');
+require('./controllers/users-list.controller');
+require('./controllers/users-detail.controller');
+require('./controllers/users-mfa.controller');
+require('./controllers/users-serviceaccounts.controller');

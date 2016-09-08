@@ -1,0 +1,18 @@
+<h5><i>customer-contracts.html</i></h5>
+<div class="modal-header">
+    <h4 class="modal-title">Contracts by Customer</h4>
+</div>
+<div class="modal-body">
+    <form class="form-inline" name="customerForm" ng-submit="customerContractsVm.submit()">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Customer" ng-model="customerContractsVm.id">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>       
+    <div ui-grid="customerContractsVm.gridOptions" ui-grid-selection class="myGrid"></div> 
+    <pager total-items="customerContractsVm.totalItems" ng-model="customerContractsVm.currentPage"></pager>    
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-disabled="!customerContractsVm.contractSelected" ng-click="customerContractsVm.ok()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="customerContractsVm.cancel()">Cancel</button>
+</div>

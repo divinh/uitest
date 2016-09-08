@@ -1,0 +1,23 @@
+<div class="row">
+	<div class="col-sm-12">
+		<h5><i>accounts.html</i></h5>
+	</div>	
+</div>
+<div class="row">
+	<div class="col-sm-6">
+		<h4>Approved Accounts</h4>
+		<ul>
+			<li ng-repeat="account in accountsVm.approvedAccounts">
+				<span>{{account.accountNr}} - {{account.accountNm}}</span>
+			</li>
+		</ul>
+	</div>
+	<div class="col-sm-6">
+		<h4>Incomplete Accounts</h4>
+		<ul>
+			<li ng-repeat="account in accountsVm.accounts">
+				<span>{{account.accountNr}} - {{account.accountNm}}</span>
+			</li>
+		</ul>
+	</div>
+</div>

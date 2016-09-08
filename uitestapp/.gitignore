@@ -1,0 +1,24 @@
+# ignore all files in the tmp directory
+tmp
+
+# ignore all files that end with a tilde, this are temp files
+*~
+
+# ignore Log files
+*.xml
+logs
+*.log
+npm-debug.log*
+
+# ignore covereage directory
+coverage
+
+# ignore dependency modules and packages
+node_modules
+jspm_packages
+
+# ignore optional npm cache directory
+.npm
+
+# ignore optional REPL history
+.node_repl_history

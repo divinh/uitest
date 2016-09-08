@@ -1,0 +1,16 @@
+<div class="row">
+	<h5><i>users-detail.html</i></h5>
+</div>	
+<div class="row">
+	<span>{{usersDetailVm.user}}</span>
+</div>	
+<div class="row">
+	<tabset>
+		<tab ng-repeat="tab in usersDetailVm.tabsService.lists()" disable="tab.disabled" active="tab.active" heading="{{tab.description}}" select="$state.go(tab.state);">
+		</tab>
+	</tabset>
+</div>
+<div class="row">	
+	<h5><i>UI route users.list.detail.* viewTab injection</i></h5>
+	<div ui-view></div>
+</div>	

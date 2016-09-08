@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-sm-12">
+		<h5><i>contracts-new.html</i></h5>
+	</div>	
+</div>	
+<div class="row">
+	<div class="col-sm-12">
+		<h4>Multi-step Contract Create</h4>
+	</div>	
+</div>	
+<div class="row">
+	<div class="col-sm-12">
+		<h5><i>UI route contracts.new.* view injection</i></h5>
+        <form id="conract-create-form" ng-submit="contractsNewVm.processForm()">
+            <!-- our nested state views will be injected here -->
+            <div id="form-views" ui-view></div>
+        </form>	
+	</div>	
+</div>	

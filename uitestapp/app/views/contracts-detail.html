@@ -1,0 +1,27 @@
+<div class="row">
+	<h5><i>contracts-detail.html</i></h5>
+</div>	
+<div class="row">
+	<div class="col-sm-6">
+		<h4>Approved Contract</h4>
+		<pre>{{contractsDetailVm.approvedContract}}</pre>
+	</div>
+	<div class="col-sm-6">
+		<h4>Incomplete Contract</h4>
+		<pre>{{contractsDetailVm.contract}}</pre>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<tabset>
+			<tab ng-repeat="tab in contractsDetailVm.tabsService.lists()"  disable="tab.disabled" active="tab.active" heading="{{tab.description}}" select="$state.go(tab.state)">
+			</tab>
+		</tabset>
+	</div>	
+</div>
+<div class="row">	
+	<div class="col-sm-12">	
+		<h5><i>UI route contracts.detail.* viewTab injection</i></h5>
+		<div ui-view="viewTab"></div>
+	</div>	
+</div>	

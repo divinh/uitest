@@ -1,0 +1,23 @@
+<div class="row">
+	<div class="col-sm-12">
+		<h5><i>customers.html</i></h5>
+	</div>	
+</div>
+<div class="row">
+	<div class="col-sm-6">
+		<h4>Approved Customers</h4>
+		<ul>
+			<li ng-repeat="customer in customersVm.approvedCustomers">
+				<span>{{customer.customerNr}} - {{customer.customerNm}}</span>
+			</li>
+		</ul>
+	</div>
+	<div class="col-sm-6">
+		<h4>Incomplete Customers</h4>
+		<ul>
+			<li ng-repeat="customer in customersVm.customers">
+				<span>{{customer.customerNr}} - {{customer.customerNm}}</span>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+<h5><i>users-list.html</i></h5>	
+<div class="row">
+	<a class="btn btn-default" role="button" ui-sref="users.new" ng-click="usersVm.id = ''">New</a>
+	<button type="button" class="btn btn-default">Review</button>	
+	<button type="button" class="btn btn-default">Re-assign</button>
+</div>
+<div class="row">					
+	<button type="button" class="btn btn-default">Approve</button>
+	<button type="button" class="btn btn-default">Reject</button>
+	<button type="button" class="btn btn-default">Discard</button>
+</div>	
+<div class="row">
+	<a ng-repeat="user in usersListVm.userList" ui-sref-active="active" class="list-group-item" ui-sref="users.list.detail({userid: user.id})">{{user.id}}</a>
+</div>	
+
+
+
